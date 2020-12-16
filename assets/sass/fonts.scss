@@ -1,0 +1,17 @@
+
+// https://fonts.googleapis.com/css?family=Roboto
+@font-face {
+  font-family: "Helvetica Neue Arabic";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/helveticaneuelt-arabic-55-roman.ttf);
+}
+
+html {
+  font-family: "Helvetica Neue Arabic", "Helvetica Neue", "Roboto", "Helvetica", BlinkMacSystemFont, -apple-system, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Arial", sans-serif; ;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  line-height: 1.5;
+}
