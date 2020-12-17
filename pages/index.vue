@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <header style="height: 100px;">
+      <app-header />
       <ul>
         <li>Switch dark and light mode</li>
         <li>Switch Lang</li>
@@ -19,7 +20,12 @@
 </template>
 
 <script>
-  export default {}
+  import AppHeader from '@/components/Shared/AppHeader'
+  export default {
+    components: {
+      AppHeader
+    }
+  }
 </script>
 
 <style scoped>
