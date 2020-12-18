@@ -2,7 +2,7 @@
   <header>
     <ul>
       <li>Switch dark and light mode</li>
-      <li>Switch Lang</li>
+      <li>Page loaded in {{ loadTime }}ms</li>
       <li><dark-mode-switcher /></li>
     </ul>
   </header>
@@ -13,7 +13,18 @@
   export default {
     name: 'AppHeader',
     components: { DarkModeSwitcher },
-    mounted() {}
+    data: () => ({
+      loadTime: 0
+    }),
+    mounted() {
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const performance = window.performance || window.mozPerformance || window.msPerformance || window.webkitPerformance || {}
+          const timing = performance.getEntriesByType('navigation')[0]
+          this.loadTime = Math.round(timing.domComplete)
+        }, 0)
+      })
+    }
   }
 </script>
 
