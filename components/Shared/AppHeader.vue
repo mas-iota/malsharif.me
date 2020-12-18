@@ -1,18 +1,29 @@
 <template>
   <header>
     <ul>
-      <li>Switch dark and light mode</li>
-      <li>Page loaded in {{ loadTime }}ms</li>
-      <li><dark-mode-switcher /></li>
+      <li>
+        {{ $t('page_loaded', {time: loadTime}) }}
+      </li>
+      <li>
+        <dark-mode-switcher />
+      </li>
+      <li>
+        <locale-switcher />
+      </li>
     </ul>
   </header>
 </template>
 
 <script>
   import DarkModeSwitcher from '@/components/UI/DarkModeSwitcher'
+  import LocaleSwitcher from '@/components/UI/LocaleSwitcher'
+
   export default {
     name: 'AppHeader',
-    components: { DarkModeSwitcher },
+    components: {
+      LocaleSwitcher,
+      DarkModeSwitcher
+    },
     data: () => ({
       loadTime: 0
     }),

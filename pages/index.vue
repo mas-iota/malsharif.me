@@ -16,9 +16,18 @@
 
 <script>
   import AppHeader from '@/components/Shared/AppHeader'
+
   export default {
     components: {
       AppHeader
+    },
+    head() {
+      return {
+        htmlAttrs: {
+          lang: this.locale,
+          dir: this.$i18n.locale === 'ar' ? 'rtl' : 'ltr'
+        }
+      }
     }
   }
 </script>
@@ -27,8 +36,6 @@
   h2 {
     font-size: 1.5rem;
   }
-
-
 
   main {
     flex: 1;
@@ -41,6 +48,4 @@
   footer {
     padding: 10px;
   }
-
-
 </style>
