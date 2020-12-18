@@ -1,6 +1,6 @@
 <template>
   <label class="dark-mode-switcher" :style="{'background-color': bgColor}">
-    <input v-model="active" type="checkbox">
+    <input v-model="active" type="checkbox" @change="toggleDarkMode">
     <span class="main-body" :style="{'background-color': invertedBgColor}" />
     <span class="shadow">
       <span :style="{'background-color': bgColor}" />
@@ -39,6 +39,16 @@
       invertedBgColor() {
         return this.active ? 'white' : 'black'
       }
+    },
+    methods: {
+      toggleDarkMode() {
+        const el = document.body
+        if (this.active) {
+          el.classList.add('is-dark')
+        } else {
+          el.classList.remove('is-dark')
+        }
+      }
     }
   }
 </script>
@@ -56,8 +66,8 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     cursor: pointer;
     transition: background $animation-duration ease-in-out;

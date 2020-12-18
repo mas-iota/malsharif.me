@@ -1,12 +1,7 @@
 <template>
   <div class="container">
-    <header style="height: 100px;">
-      <app-header />
-      <ul>
-        <li>Switch dark and light mode</li>
-        <li>Switch Lang</li>
-      </ul>
-    </header>
+    <app-header />
+
     <main>
       <div class="intro">
         <h2>Hello</h2>
@@ -33,18 +28,7 @@
     font-size: 1.5rem;
   }
 
-  header ul {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-  }
 
-  header ul li {
-    list-style-type: none;
-    padding: 10px;
-    outline: 1px solid black;
-  }
 
   main {
     flex: 1;
@@ -58,15 +42,5 @@
     padding: 10px;
   }
 
-  @media only screen and (max-width: 600px) {
-    header ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      margin: 0;
-      padding: 0;
-    }
-  }
 
 </style>

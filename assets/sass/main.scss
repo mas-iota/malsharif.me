@@ -10,10 +10,6 @@
   box-sizing: border-box;
 }
 
-html {
-  background-color: white;
-}
-
 html,
 body,
 #__nuxt,
@@ -22,8 +18,15 @@ body,
 }
 
 body {
+  transition: background-color 750ms, color 750ms;
+  background-color: white;
   display: flex;
   flex-direction: column;
+}
+
+body.is-dark {
+  background-color: #0d1f2b;
+  color: #cad4d8;
 }
 
 .container {
