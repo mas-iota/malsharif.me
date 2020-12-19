@@ -1,6 +1,6 @@
 <template>
-  <label class="dark-mode-switcher">
-    <input v-model="active" type="checkbox" @change="toggleDarkModeAndSetCookie">
+  <label :class="{ 'dark-mode-switcher': true, 'in-progress': throttling }">
+    <input v-model="active" :disabled="throttling" type="checkbox" @change="userToggleDarkMode">
     <span class="main-body" />
     <span class="shadow">
       <span />
@@ -32,7 +32,8 @@
   export default {
     name: 'DarkModeSwitcher',
     data: () => ({
-      active: false
+      active: false,
+      throttling: false
     }),
     created() {
       if (process.browser) {
@@ -55,9 +56,15 @@
           el.classList.remove('is-dark')
         }
       },
-      toggleDarkModeAndSetCookie() {
+      userToggleDarkMode() {
         this.toggleDarkMode()
         this.setCookie()
+        this.throttleSwitcher()
+      },
+      throttleSwitcher() {
+        this.throttling = true
+        // eslint-disable-next-line no-return-assign
+        setTimeout(() => this.throttling = false, 750)
       },
       setCookie() {
         const value = this.active ? 'dark' : 'light'
@@ -86,6 +93,10 @@
     cursor: pointer;
     transition: background $animation-duration ease-in-out;
     background-color: white;
+  }
+
+  .dark-mode-switcher.in-progress {
+    cursor: not-allowed;
   }
 
   body.is-dark .dark-mode-switcher,
