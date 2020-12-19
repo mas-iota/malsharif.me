@@ -5,12 +5,12 @@
     <main>
       <div class="intro">
         <h2>Hello</h2>
-        <p>My name is Mahmoud AlSharif, I'm a Web Developer with a passion for new technologies and clean code. <br > I specialize in web programming and scripting, especially Javascript. I build beautiful, high performance, and easily maintained web apps.</p>
+        <p>My name is Mahmoud AlSharif, I'm a Web Developer with a passion for new technologies and clean code. <br> I specialize in web programming and scripting, especially Javascript. I build beautiful, high performance, and easily maintained web apps.</p>
         <p>I use the following technologies on a daily basis: Vuejs, NuxtJS, SASS, Webpack, Nodejs, Express and Fastify </p>
         <p>Away from the keyboard, I go to the GYM or play with the cats, sometimes I cook and sometimes I write</p>
       </div>
     </main>
-<!--    <footer>Footer</footer>-->
+    <!--    <footer>Footer</footer>-->
   </div>
 </template>
 

@@ -18,10 +18,10 @@ body,
 }
 
 body {
-  transition: background-color 750ms, color 750ms;
   background-color: white;
   display: flex;
   flex-direction: column;
+  transition: background-color 750ms, color 750ms;
 }
 
 body.is-dark {

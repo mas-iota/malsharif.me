@@ -1,6 +1,6 @@
 <template>
   <label class="dark-mode-switcher">
-    <input v-model="active" type="checkbox" @change="toggleDarkMode">
+    <input v-model="active" type="checkbox" @change="toggleDarkModeAndSetCookie">
     <span class="main-body" />
     <span class="shadow">
       <span />
@@ -27,11 +27,25 @@
 </template>
 
 <script>
+  import { Cookies } from '@/utils'
+
   export default {
     name: 'DarkModeSwitcher',
     data: () => ({
       active: false
     }),
+    created() {
+      if (process.browser) {
+        const theme = Cookies.getItem('site-theme')
+
+        if (theme) {
+          this.active = theme === 'dark'
+          this.toggleDarkMode()
+        } else {
+          this.setCookie()
+        }
+      }
+    },
     methods: {
       toggleDarkMode() {
         const el = document.body
@@ -40,6 +54,14 @@
         } else {
           el.classList.remove('is-dark')
         }
+      },
+      toggleDarkModeAndSetCookie() {
+        this.toggleDarkMode()
+        this.setCookie()
+      },
+      setCookie() {
+        const value = this.active ? 'dark' : 'light'
+        Cookies.setItem('site-theme', value, { expire: 365, secure: this.$config.secure })
       }
     }
   }

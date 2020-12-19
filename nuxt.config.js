@@ -17,6 +17,10 @@ export default {
     ]
   },
 
+  publicRuntimeConfig: {
+    appHostName: process.env.HOST_NAME,
+    secure: JSON.parse(process.env.SECURE)
+  },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '@/assets/sass/main.scss'
