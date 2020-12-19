@@ -4,10 +4,10 @@
 
     <main>
       <div class="intro">
-        <h2>Hello</h2>
-        <p>My name is Mahmoud AlSharif, I'm a Web Developer with a passion for new technologies and clean code. <br> I specialize in web programming and scripting, especially Javascript. I build beautiful, high performance, and easily maintained web apps.</p>
-        <p>I use the following technologies on a daily basis: Vuejs, NuxtJS, SASS, Webpack, Nodejs, Express and Fastify </p>
-        <p>Away from the keyboard, I go to the GYM or play with the cats, sometimes I cook and sometimes I write</p>
+        <h2>{{ $t('hello') }}</h2>
+        <p>{{ $t('intro_p_1') }}</p>
+        <p>{{ $t('intro_p_2') }}</p>
+        <p>{{ $t('intro_p_3') }}</p>
       </div>
     </main>
     <!--    <footer>Footer</footer>-->
@@ -32,17 +32,30 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   h2 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    text-align: justify;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
 
   main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    outline: 1px solid black;
     padding: 5rem 2rem;
+  }
+
+  .intro {
+    max-width: 700px;
   }
 
   footer {
