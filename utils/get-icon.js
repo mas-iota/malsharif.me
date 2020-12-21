@@ -58,6 +58,9 @@ const getIcon = (name) => {
     case 'alphabet':
       icon = ICONS.ALPHABET
       break
+    case 'stackoverflow':
+      icon = ICONS.STACKOVERFLOW
+      break
     default:
       icon = {}
       break

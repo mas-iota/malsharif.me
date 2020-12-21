@@ -1,7 +1,7 @@
 <template>
   <header>
     <ul>
-      <li>
+      <li v-if="loadTime > 0">
         {{ $t('page_loaded', {time: loadTime}) }}
       </li>
       <li>
