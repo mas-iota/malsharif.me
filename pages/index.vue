@@ -51,7 +51,7 @@
         </ul>
       </div>
     </main>
-    <!--    <footer>Footer</footer>-->
+      <footer>Powered by: Mark Knopfler <b>OBE</b></footer>
   </div>
 </template>
 
