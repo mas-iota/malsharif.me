@@ -42,7 +42,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    // '@nuxtjs/pwa',
+    '@nuxtjs/pwa',
     // Doc: https://nuxt-community.github.io/nuxt-i18n/setup.html
     'nuxt-i18n',
   ],
@@ -58,6 +58,12 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
 
+  },
+
+  pwa: {
+    workbox: {
+      cacheAssets: false, // for /*
+    }
   },
 
   i18n: {
