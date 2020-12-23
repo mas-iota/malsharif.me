@@ -61,9 +61,7 @@ export default {
   },
 
   pwa: {
-    workbox: {
-      cacheAssets: false, // for /*
-    }
+    workbox: false
   },
 
   i18n: {
