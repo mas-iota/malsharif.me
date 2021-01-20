@@ -45,6 +45,8 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://nuxt-community.github.io/nuxt-i18n/setup.html
     'nuxt-i18n',
+    // https://github.com/daliborgogic/nuxt-brotli
+    'nuxt-brotli'
   ],
 
   eslint: {
@@ -61,10 +63,14 @@ export default {
   },
 
   pwa: {
-    workbox: {
-      cacheAssets: false, // for /*
-    }
+    workbox: false
   },
+
+  'nuxt-brotli': {
+    deleteOriginalAssets: true
+  },
+
+  modern: 'client',
 
   i18n: {
     seo: true,
