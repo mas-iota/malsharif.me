@@ -14,7 +14,9 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'preload',
-        as: 'style',
+        as: 'font',
+        crossorigin: 'crossorigin',
+        type: 'font/woff2',
         href: '/fonts/helveticaneuelt-arabic-55-roman.woff2'
       }
     ]
