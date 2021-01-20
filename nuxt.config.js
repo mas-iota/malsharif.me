@@ -16,11 +16,6 @@ export default {
         rel: 'preload',
         as: 'style',
         href: '/fonts/helveticaneuelt-arabic-55-roman.woff2'
-      },
-      {
-        rel: 'preload',
-        as: 'style',
-        href: '/fonts/helveticaneuelt-arabic-55-roman.woff'
       }
     ]
   },
