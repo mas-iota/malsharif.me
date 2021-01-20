@@ -11,7 +11,17 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'preload',
+        as: 'style',
+        href: '/fonts/helveticaneuelt-arabic-55-roman.woff2'
+      },
+      {
+        rel: 'preload',
+        as: 'style',
+        href: '/fonts/helveticaneuelt-arabic-55-roman.woff'
+      }
     ]
   },
 
