@@ -66,10 +66,6 @@ export default {
     workbox: false
   },
 
-  'nuxt-brotli': {
-    deleteOriginalAssets: true
-  },
-
   modern: 'client',
 
   i18n: {
