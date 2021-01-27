@@ -1,10 +1,10 @@
-
-// https://fonts.googleapis.com/css?family=Roboto
 @font-face {
   font-family: "HelveticaNeueLT Arabic 55 Roman";
   font-style: normal;
   font-weight: 400;
+  font-display: optional;
   src: url(/fonts/helveticaneuelt-arabic-55-roman.woff2) format("woff2");
+  unicode-range: U+600-06FF;
 }
 
 html {
