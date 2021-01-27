@@ -101,16 +101,22 @@
 
   body.is-dark .dark-mode-switcher,
   body.is-dark .shadow > span {
-    background-color: black;
+    background-color: #0d1f2b;
   }
   body.is-dark .main-body {
-    background-color: white;
+    background-color: #e2e8f0;
   }
 
-  .main-body,
   .shadow > span {
     transition: $animation-duration ease-in-out;
     transition-property: background, transform;
+  }
+
+  .dark-mode-switcher:hover .main-body {
+    background-color: #00cd81;
+    transition-duration: .3s;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
   }
 
   .main-body {
@@ -118,7 +124,7 @@
     width: 30%;
     height: 30%;
     border-radius: 50%;
-    background-color: black;
+    background-color: #4a5568;
   }
 
   .shadow {
@@ -137,6 +143,13 @@
     }
   }
 
+  .dark-mode-switcher:hover .sunray span {
+    background-color: #00cd81;
+    transition-duration: .3s;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+  }
+
   .sunray {
     position: absolute;
     width: 10%;
@@ -147,7 +160,7 @@
       width: 100%;
       height: 100%;
       border-radius: 5rem;
-      background-color: black;
+      background-color: #4a5568;
       transition: $animation-duration ease-in-out;
       transition-property: transform, opacity;
     }

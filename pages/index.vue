@@ -8,10 +8,7 @@
         <p>{{ $t('intro_p_1') }}</p>
         <p>{{ $t('intro_p_2') }}</p>
         <p>{{ $t('intro_p_3') }}</p>
-      </div>
-      <div>
-        <p>Connect with me: </p>
-        <ul>
+        <ul class="contact-links">
           <li>
             <a href="https://www.linkedin.com/in/m-alsharif/" target="_blank">
               <Icon
@@ -39,7 +36,7 @@
               />
             </a>
           </li>
-          <lI>
+          <li>
             <a href="mailto:mahmoud.k.alsharif@gmail.com">
               <Icon
                 :name="'email'"
@@ -51,7 +48,6 @@
         </ul>
       </div>
     </main>
-      <footer>Powered by: Mark Knopfler <b>OBE</b></footer>
   </div>
 </template>
 
@@ -110,12 +106,38 @@
     padding: 10px;
   }
 
-  ul {
-    display: flex;
+  body.is-dark ul.contact-links li .icon {
+    color: #e2e8f0;
+  }
 
+  ul.contact-links {
+    display: flex;
+    margin-top: 3rem;
     li {
-      margin-right: 20px;
+      .icon {
+        color: #4a5568;
+      }
+      .icon:hover {
+        color: #00cd81 !important;
+        transition-duration: .15s;
+        transition-property: color;
+      }
     }
   }
 
+  html[dir=rtl] .intro li {
+    margin-left: 20px;
+  }
+
+  html[dir=ltr] .intro li {
+    margin-right: 20px;
+  }
+
+  html[dir=rtl] .intro li:first-child {
+    margin-right: -4px;
+  }
+
+  html[dir=ltr] .intro li:first-child {
+    margin-left: -4px;
+  }
 </style>

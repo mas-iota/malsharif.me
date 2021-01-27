@@ -55,13 +55,4 @@
     list-style-type: none;
     padding: 10px;
   }
-
-  @media only screen and (max-width: 600px) {
-    header ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-    }
-  }
 </style>

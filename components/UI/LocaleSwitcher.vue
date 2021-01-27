@@ -37,13 +37,17 @@
 </script>
 
 <style scoped>
-  .icon {
-    cursor: pointer;
-  }
-
   a {
     text-decoration: none;
-    color: inherit;
+    color: #4a5568;
   }
 
+  body.is-dark a {
+    color: #e2e8f0;
+  }
+  a:hover {
+    color: #00cd81 !important;
+    transition-duration: .15s;
+    transition-property: color;
+  }
 </style>

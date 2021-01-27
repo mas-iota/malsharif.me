@@ -1,5 +1,5 @@
 <template>
-  <span class="icon" :class="size">
+  <span class="icon ease-in-out" :class="size">
     <svg :viewBox="icon.viewBox">
       <title>{{ name }}</title>
       <path
