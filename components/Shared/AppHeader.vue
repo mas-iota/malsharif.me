@@ -32,7 +32,7 @@
         setTimeout(() => {
           const performance = window.performance || window.mozPerformance || window.msPerformance || window.webkitPerformance || {}
           const timing = performance.getEntriesByType('navigation')[0]
-          this.loadTime = Math.round(timing.domComplete)
+          this.loadTime = (Math.round(timing.domComplete) / 1000).toFixed(2)
         }, 0)
       })
     }
