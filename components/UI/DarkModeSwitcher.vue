@@ -124,7 +124,7 @@
     width: 30%;
     height: 30%;
     border-radius: 50%;
-    background-color: #4a5568;
+    background-color: #2f3540;
   }
 
   .shadow {
@@ -160,7 +160,7 @@
       width: 100%;
       height: 100%;
       border-radius: 5rem;
-      background-color: #4a5568;
+      background-color: #2f3540;
       transition: $animation-duration ease-in-out;
       transition-property: transform, opacity;
     }

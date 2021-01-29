@@ -39,7 +39,7 @@
 <style scoped>
   a {
     text-decoration: none;
-    color: #4a5568;
+    color: #2f3540;
   }
 
   body.is-dark a {
