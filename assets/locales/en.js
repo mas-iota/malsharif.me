@@ -10,5 +10,8 @@ export default {
     description: 'A modern vendor oriented e-commerce platform, targeting all sellers categories. I built the frontend.'
   },
   writings: 'Writings',
-  my_resume: 'my resume'
+  my_resume: 'my resume',
+  here: 'here',
+  view_resume: 'Click {0} to view a latest copy of my resume.',
+  blog_note: 'You will find here the latest posts soon.'
 }

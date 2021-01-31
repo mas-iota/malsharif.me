@@ -94,6 +94,10 @@ strong {
   text-transform: capitalize;
 }
 
+.is-link {
+  color: #00cd81;
+}
+
 @media screen and (min-width: 1024px) {
   .container {
     max-width: 960px;

@@ -75,14 +75,16 @@
         <h2 class="is-capitalized is-size-4 mb-3 is-bold">
           {{ $t('my_resume') }}
         </h2>
-        <p>will be uploaded soon...</p>
+        <i18n path="view_resume" tag="p">
+          <a href="/docs/malsharif201911muse.pdf" class="is-undecorated is-bold is-link" target="_blank">{{ $t('here') }}</a>
+        </i18n>
       </section>
 
       <section class="landing-section">
         <h2 class="is-capitalized is-size-4 mb-3 is-bold">
           {{ $t('writings') }}
         </h2>
-        <p>blog is coming soon stay tuned...</p>
+        <p>{{ $t('blog_note') }}</p>
       </section>
     </main>
   </div>
