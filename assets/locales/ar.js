@@ -14,5 +14,7 @@ export default {
   here: 'هنا',
   view_resume: 'اضغط {0} لعرض احدث نسخة من سيرتي الذاتية.',
   blog_note: 'ستجد هنا اخر المقالات قريبا.',
-  footer_copyright: `© ${new Date().getFullYear()} Mahmoud AlSharif`
+  footer_copyright: `© ${new Date().getFullYear()} Mahmoud AlSharif`,
+  meta_default_title: 'محمود الشريف - مطور ويب',
+  meta_default_description: 'الموقع الشخصي محمود الشريف - الرئيسية'
 }

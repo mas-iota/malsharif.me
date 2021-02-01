@@ -26,6 +26,7 @@ export default {
 
   publicRuntimeConfig: {
     appHostName: process.env.HOST_NAME,
+    appHost: process.env.WEBSITE_HOST,
     secure: JSON.parse(process.env.SECURE)
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -35,6 +36,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '@/plugins/meta.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

@@ -14,5 +14,7 @@ export default {
   here: 'here',
   view_resume: 'Click {0} to view a latest copy of my resume.',
   blog_note: 'You will find here the latest posts soon.',
-  footer_copyright: `© ${new Date().getFullYear()} Mahmoud AlSharif`
+  footer_copyright: `© ${new Date().getFullYear()} Mahmoud AlSharif`,
+  meta_default_title: 'Mahmoud AlSharif - Web Developer',
+  meta_default_description: 'Mahmoud AlSharif Personal Website - Home'
 }
