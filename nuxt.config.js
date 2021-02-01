@@ -57,7 +57,9 @@ export default {
     // https://github.com/daliborgogic/nuxt-brotli
     'nuxt-brotli',
     // https://github.com/nuxt-community/robots-module#readme
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    // https://sitemap.nuxtjs.org/guide/setup
+    '@nuxtjs/sitemap'
   ],
 
   eslint: {
@@ -81,6 +83,17 @@ export default {
     UserAgent: '*',
     Disallow: '',
     Sitemap: path.join(process.env.WEBSITE_HOST, '/', 'sitemap.xml')
+  },
+
+  sitemap: {
+    hostname: process.env.WEBSITE_HOST,
+    gzip: false,
+    i18n: true,
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date()
+    }
   },
 
   modern: 'client',
