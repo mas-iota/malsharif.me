@@ -1,3 +1,5 @@
+import * as path from 'path'
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -53,7 +55,9 @@ export default {
     // Doc: https://nuxt-community.github.io/nuxt-i18n/setup.html
     'nuxt-i18n',
     // https://github.com/daliborgogic/nuxt-brotli
-    'nuxt-brotli'
+    'nuxt-brotli',
+    // https://github.com/nuxt-community/robots-module#readme
+    '@nuxtjs/robots'
   ],
 
   eslint: {
@@ -71,6 +75,12 @@ export default {
 
   pwa: {
     workbox: false
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '',
+    Sitemap: path.join(process.env.WEBSITE_HOST, '/', 'sitemap.xml')
   },
 
   modern: 'client',
