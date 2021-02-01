@@ -13,5 +13,6 @@ export default {
   my_resume: 'my resume',
   here: 'here',
   view_resume: 'Click {0} to view a latest copy of my resume.',
-  blog_note: 'You will find here the latest posts soon.'
+  blog_note: 'You will find here the latest posts soon.',
+  footer_copyright: `© ${new Date().getFullYear()} Mahmoud AlSharif`
 }

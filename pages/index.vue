@@ -73,20 +73,21 @@
 
       <section class="landing-section">
         <h2 class="is-capitalized is-size-4 mb-3 is-bold">
+          {{ $t('writings') }}
+        </h2>
+        <p>{{ $t('blog_note') }}</p>
+      </section>
+
+      <section class="landing-section">
+        <h2 class="is-capitalized is-size-4 mb-3 is-bold">
           {{ $t('my_resume') }}
         </h2>
         <i18n path="view_resume" tag="p">
           <a href="/docs/malsharif201911muse.pdf" class="is-undecorated is-bold is-link" target="_blank">{{ $t('here') }}</a>
         </i18n>
       </section>
-
-      <section class="landing-section">
-        <h2 class="is-capitalized is-size-4 mb-3 is-bold">
-          {{ $t('writings') }}
-        </h2>
-        <p>{{ $t('blog_note') }}</p>
-      </section>
     </main>
+    <app-footer />
   </div>
 </template>
 
@@ -94,9 +95,11 @@
   import AppHeader from '@/components/Shared/AppHeader'
   import Icon from '@/components/UI/Icon'
   import { getIcon } from '@/utils'
+  import AppFooter from '../components/Shared/AppFooter'
 
   export default {
     components: {
+      AppFooter,
       AppHeader,
       Icon
     },
