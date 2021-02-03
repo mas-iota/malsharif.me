@@ -118,6 +118,10 @@
 </script>
 
 <style scoped lang="scss">
+  .projects a {
+    color: inherit;
+  }
+
   .projects a:visited {
     color:unset;
   }
