@@ -170,7 +170,6 @@
 
   .intro p {
     font-size: 1.2rem;
-    text-align: justify;
 
     &:not(:last-child) {
       margin-bottom: 1rem;
@@ -235,6 +234,12 @@
 
     .project-media p {
       text-align: unset;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .intro p {
+      text-align: justify;
     }
   }
 </style>
