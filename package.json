@@ -2,6 +2,7 @@
   "name": "malsharif.me",
   "version": "1.0.0",
   "private": true,
+  "main": "index.js",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
