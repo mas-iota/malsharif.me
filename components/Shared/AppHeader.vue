@@ -32,7 +32,7 @@
         setTimeout(() => {
           const performance = window.performance || window.mozPerformance || window.msPerformance || window.webkitPerformance || {}
           const timing = performance.getEntriesByType('navigation')[0]
-          this.loadTime = Math.round(timing.domComplete)
+          this.loadTime = (Math.round(timing.domComplete) / 1000).toFixed(2)
         }, 0)
       })
     }
@@ -54,14 +54,5 @@
   header ul li {
     list-style-type: none;
     padding: 10px;
-  }
-
-  @media only screen and (max-width: 600px) {
-    header ul {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-    }
   }
 </style>

@@ -1,3 +1,5 @@
+import path from 'path'
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -24,6 +26,7 @@ export default {
 
   publicRuntimeConfig: {
     appHostName: process.env.HOST_NAME,
+    appHost: process.env.WEBSITE_HOST,
     secure: JSON.parse(process.env.SECURE)
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -33,6 +36,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '@/plugins/meta.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -53,7 +57,11 @@ export default {
     // Doc: https://nuxt-community.github.io/nuxt-i18n/setup.html
     'nuxt-i18n',
     // https://github.com/daliborgogic/nuxt-brotli
-    'nuxt-brotli'
+    'nuxt-brotli',
+    // https://github.com/nuxt-community/robots-module#readme
+    '@nuxtjs/robots',
+    // https://sitemap.nuxtjs.org/guide/setup
+    '@nuxtjs/sitemap'
   ],
 
   eslint: {
@@ -71,6 +79,23 @@ export default {
 
   pwa: {
     workbox: false
+  },
+
+  robots: {
+    UserAgent: '*',
+    Disallow: '',
+    Sitemap: path.join(process.env.WEBSITE_HOST, '/', 'sitemap.xml')
+  },
+
+  sitemap: {
+    hostname: process.env.WEBSITE_HOST,
+    gzip: false,
+    i18n: true,
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date()
+    }
   },
 
   modern: 'client',
