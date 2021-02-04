@@ -88,3 +88,8 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# CF Worker folder
+workers-site/node_modules/
+workers-site/worker/
+wrangler.toml

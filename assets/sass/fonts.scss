@@ -4,14 +4,14 @@
   font-weight: 400;
   //font-display: optional;
   src: url(/fonts/helveticaneuelt-arabic-55-roman.woff2) format("woff2");
-  //unicode-range: U+600-06FF;
+  unicode-range: U+600-06FF;
 }
 
 html {
   font-family: "HelveticaNeueLT Arabic 55 Roman", "Helvetica Neue", "Roboto", "Helvetica", BlinkMacSystemFont, -apple-system, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Arial", sans-serif; ;
-  //-moz-osx-font-smoothing: grayscale;
-  //-webkit-font-smoothing: antialiased;
-  //text-rendering: optimizeLegibility;
-  //text-size-adjust: 100%;
-  //line-height: 1.5;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  text-size-adjust: 100%;
+  line-height: 1.5;
 }
