@@ -93,3 +93,4 @@ sw.*
 workers-site/node_modules/
 workers-site/worker/
 wrangler.toml
+wrangler.toml.bk
