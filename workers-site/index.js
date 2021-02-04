@@ -28,18 +28,9 @@ async function handleEvent(event) {
   // options.mapRequestToAsset = handlePrefix(/^\/docs/)
 
   try {
-    options.cf = {
-      cacheTtl: 86400,
-      cacheEverything: true,
-      minify:{ javascript: true, css: true, html: true }
-    }
-    options.cacheControl = {
-      browserTTL: 1 * 60 * 60 * 24,
-      edgeTTL: 2 * 60 * 60 * 24, // 2 days
-      bypassCache: false, // do not bypass Cloudflare's cache
-    }
     const res = await getAssetFromKV(event, options)
-    res.headers.set('Cache-Control', 'public, max-age=86400, immutable')
+    res.headers.set('Cache-Control', 'public,max-age=86400 , immutable')
+    res.headers.set('Pragma', 'public')
     return res
   } catch (e) {
     // if an error is thrown try to serve the asset at 404.html
